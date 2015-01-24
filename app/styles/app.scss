@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif|Special+Elite|Open+Sans);
+
+html {
+  font-size: 100%;
+}
+
+.login-right-side {
+  h1, h3 {
+    font-weight: bold;
+    font-family: 'Open Sans', serif;
+  }
+  .wrapper {
+    margin: 0 3em;
+  }
+  .intro-text {
+    margin-top: 2em;
+    line-height: 1.9em;
+    font-size: 1.5em;
+    font-family: 'Noto Serif', serif;
+  }
+}
