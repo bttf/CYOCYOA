@@ -8,6 +8,23 @@ body {
   background-color: #FFF5F5;
 }
 
+.book-info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 2em 2em;
+  text-align: left;
+  font-family: 'Raleway';
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.book-info:hover {
+  text-decoration: underline;
+}
+
 .login-right-side {
   margin-top: 4em;
   font-family: 'Noto Serif', serif;
@@ -68,7 +85,7 @@ body {
   a {
     color: #333;
   }
-  .story {
+  .story-box {
     display: inline-block;
     background-color: #ccc;
     border-radius: 10px;
@@ -80,7 +97,7 @@ body {
     font-size: 2em;
     font-weight: bold;
   }
-  .story:hover {
+  .story-box:hover {
     background-color: #aaa;
     text-decoration: underline;
   }
@@ -94,5 +111,22 @@ body {
     font-size: 2em;
     font-family: 'Droid Serif', serif;
     margin-bottom: 0.5em;
+  }
+}
+
+.story {
+  .story-title {
+    font-size: 5em;
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+  }
+  .img-upload {
+    #drop-zone {
+      border: 2px dashed #BBB;
+      border-radius: 5px;
+      padding: 25px;
+      text-align: center;
+      color: #BBB;
+    }
   }
 }

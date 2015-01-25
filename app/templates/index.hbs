@@ -18,16 +18,16 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class='index container-fluid'>
+<div class='index'>
   <div class='row'>
     <a href='#' data-toggle='modal' data-target='#newStoryModal'>
-      <div class='story'>
+      <div class='story-box'>
         + New Story
       </div></a>
 
     {{#each story in stories}}
       {{#link-to 'story' story}}
-        <div class='story'>
+        <div class='story-box'>
           {{story.title}}
         </div>
       {{/link-to}}

@@ -1,46 +1,51 @@
-<div class='container'>
-  <div class='row'>
-    <div class='img-side col-xs-12 col-sm-6 text-center'>
-      <img id='cyoa-main-img' class='hidden' src='/img/Choose-Your-Own-Adventure.jpg'>
-    </div>
-    <div class='login-right-side col-xs-12 col-sm-6'>
-      <div class='wrapper'>
-        <h4>Holy God Damn Jesus<br> It's a ...</h4>
+<div class='row'>
+  <div class='img-side col-xs-12 col-sm-6 text-center'>
+    <img id='cyoa-main-img' class='hidden' src='/img/Choose-Your-Own-Adventure.jpg'>
+    <a href='https://www.goodreads.com/book/show/755031.Space_Patrol'>
+    <div class='book-info'>
+      <em>Space Patrol</em><br>
+      Choose Your Own Adventure #22<br>
+      Julius Goodman<br>
+      Published 1983, Bantam Books<br>
+    </div></a>
+  </div>
+  <div class='login-right-side col-xs-12 col-sm-6'>
+    <div class='wrapper'>
+      <h4>What've you got to lose? <br><br>Try my product</h4>
 
-        <em ><h1>Create-Your-Own <a href='https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure'>Choose-Your-Own-Adventure</a> App</h1></em>
+      <em ><h1>The Create-Your-Own <a href='https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure'>Choose-Your-Own-Adventure</a> App</h1></em>
 
-        <div class='intro-text'>
-          <p>
-            You have been waiting all your life for this. 
-          </p>
-          <p>
-            Fans of <a href='https://en.wikipedia.org/wiki/Free_will'>self-determination</a> rejoice. 
-          </p>
-          <p>
-            Login to begin. <span class='small'>(Or check out a few <a href='#'>examples</a>.)</span>
-          </p>
-        </div>
-        <div class='login'>
-          <a href='#' class='btn btn-social btn-facebook' {{action 'fbLogin'}}>
-            {{fa-icon 'facebook'}}
-            Log in with Facebook
-          </a>
-          <br>
-          <a href='#' class='btn btn-social btn-github' {{action 'gitLogin'}}>
-            {{fa-icon 'github'}}
-            Log in with GitHub
-          </a>
-          <br>
-          <a href='#' class='btn btn-social btn-reddit' {{action 'anonLogin'}}>
-            {{fa-icon 'user'}}
-            Log in as a Guest
-          </a>
-        </div>
-        {{#if session.isAuthenticated}}
-        <h1>Success!</h1>
-          <a href='#' {{action 'logout'}}>Log Out</a>
-        {{/if}}
+      <div class='intro-text'>
+        <p>
+          You have been waiting all your life for this. 
+        </p>
+        <p>
+          Fans of <a href='/img/free-will.jpg'>self-determination</a> rejoice. 
+        </p>
+        <p>
+          Login to begin. <span class='small'>(Or check out a few <a href='#'>examples</a>.)</span>
+        </p>
       </div>
+      <div class='login'>
+        <a href='#' class='btn btn-social btn-facebook' {{action 'fbLogin'}}>
+          {{fa-icon 'facebook'}}
+          Log in with Facebook
+        </a>
+        <br>
+        <a href='#' class='btn btn-social btn-github' {{action 'gitLogin'}}>
+          {{fa-icon 'github'}}
+          Log in with GitHub
+        </a>
+        <br>
+        <a href='#' class='btn btn-social btn-reddit' {{action 'anonLogin'}}>
+          {{fa-icon 'user'}}
+          Log in as a Guest
+        </a>
+      </div>
+      {{#if session.isAuthenticated}}
+      <h1>Success!</h1>
+        <a href='#' {{action 'logout'}}>Log Out</a>
+      {{/if}}
     </div>
   </div>
 </div>
