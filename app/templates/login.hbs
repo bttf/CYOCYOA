@@ -1,9 +1,9 @@
 <div class='container'>
   <div class='row'>
-    <div class='img-side col-xs-12 col-sm-4 text-center'>
+    <div class='img-side col-xs-12 col-sm-6 text-center'>
       <img id='cyoa-main-img' class='hidden' src='/img/Choose-Your-Own-Adventure.jpg'>
     </div>
-    <div class='login-right-side col-xs-12 col-sm-6 col-sm-offset-2'>
+    <div class='login-right-side col-xs-12 col-sm-6'>
       <div class='wrapper'>
         <h4>Holy God Damn Jesus<br> It's a ...</h4>
 
@@ -21,11 +21,20 @@
           </p>
         </div>
         <div class='login'>
-            <a href='#' {{action 'fbLogin'}}>Log in with Facebook</a>
-            <br>
-            <a href='#' {{action 'gitLogin'}}>Log in with GitHub</a>
-            <br>
-            <a href='#' {{action 'anonLogin'}}>Log in as a Guest</a>
+          <a href='#' class='btn btn-social btn-facebook' {{action 'fbLogin'}}>
+            {{fa-icon 'facebook'}}
+            Log in with Facebook
+          </a>
+          <br>
+          <a href='#' class='btn btn-social btn-github' {{action 'gitLogin'}}>
+            {{fa-icon 'github'}}
+            Log in with GitHub
+          </a>
+          <br>
+          <a href='#' class='btn btn-social btn-reddit' {{action 'anonLogin'}}>
+            {{fa-icon 'user'}}
+            Log in as a Guest
+          </a>
         </div>
         {{#if session.isAuthenticated}}
         <h1>Success!</h1>
