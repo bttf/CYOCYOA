@@ -35,6 +35,9 @@ export default Ember.Component.extend({
     }.on('didInsertElement'),
 
     actions: {
+      addOption: function() {
+        this.sendAction('addOption', this.get('page'));
+      },
       save: function() {
         console.log('here we save page');
         this.sendAction('save', this.get('page'));

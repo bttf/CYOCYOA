@@ -27,11 +27,7 @@
     </div>
 
     {{#each page in model.pages}}
-      {{#if collapseAll}}
-        {{page-editor page=page save='savePage' delete='deletePage' isCollapsed=true}}
-      {{else}}
-        {{page-editor page=page save='savePage' delete='deletePage'}}
-      {{/if}}
+      {{page-editor page=page save='savePage' delete='deletePage' addOption='addOption' isCollapsed=collapseAll}}
     {{/each}}
 
     <a href='' {{action 'newPage'}}>

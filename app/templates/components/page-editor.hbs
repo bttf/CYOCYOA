@@ -5,6 +5,13 @@
 
   {{input type='file' id=imgInputId}}
 
+  {{#each option in page.options}}
+    {{input type='text' class=':option-lead' value=option.lead placeholder='If <blah> go to page ...'}}
+  {{/each}}
+  <div class='wrapper'>
+    <button type='button' class='add-option btn btn-info' {{action 'addOption'}}>+ Option</button>
+  </div>
+
   <div {{bind-attr class='fileSizeError:file-size-error:file-size :text-danger'}}>
     File size limit: 850 KB
   </div>
@@ -28,9 +35,9 @@
 </button>
 
 {{#if page.img}}
-<img {{bind-attr class=':img-preview :img-responsive' src=page.img}}></img>
+  <img {{bind-attr class=':img-preview :img-responsive' src=page.img}}></img>
 {{/if}}
 
 {{#if page.isDirty}}
-<div class='text-danger'>Unsaved progress</div>
+  <div class='text-danger'>Unsaved progress</div>
 {{/if}}

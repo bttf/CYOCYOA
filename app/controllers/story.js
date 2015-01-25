@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend({
   collapseAll: false,
   actions: {
+    addOption: function(page) {
+      var options = page.get('options');
+      options.pushObject(this.get('store').createRecord('option'));
+    },
     toggleCollapseAll: function() {
       this.set('collapseAll', !this.get('collapseAll'));
     },
