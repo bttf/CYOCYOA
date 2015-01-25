@@ -82,3 +82,14 @@ body {
     text-decoration: underline;
   }
 }
+
+.new-story {
+  input {
+    width: 50%;
+  }
+  .preview-title {
+    font-size: 2em;
+    font-family: 'Droid Serif', serif;
+    margin-bottom: 0.5em;
+  }
+}

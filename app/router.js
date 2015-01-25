@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route("login");
-  this.route("indexx");
+  this.route("story", { path: '/story/:id' });
 });
 
 export default Router;

@@ -5,5 +5,5 @@ var attr = DS.attr,
 
 export default DS.Model.extend({
   uid: attr('string'),
-  stories: hasMany('story')
+  stories: hasMany('story', { async: true, inverse: 'user' })
 });
