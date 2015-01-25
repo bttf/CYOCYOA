@@ -12,6 +12,7 @@
     <div class='story-title col-xs-12 col-sm-8'>
       {{title}}
       <div class='controls'>
+        <label>First page: {{model.firstPage.title}}</label>
         <button type='button' class='btn btn-primary' {{action 'toggleCollapseAll'}}>
           {{#if collapseAll}}
             Expand All
