@@ -6,8 +6,13 @@
   {{input type='file' id=imgInputId}}
 
   {{#each option in page.options}}
-    {{input type='text' class=':option-lead' value=option.lead placeholder='If <blah> go to page ...'}}
+
+    {{input type='text' class='option-lead' value=option.lead placeholder='Option'}}
+
+    {{view 'select' content=pages optionLabelPath='content.title' optionValuePath='content.id' selection='null' value=option.goTo}}
+
   {{/each}}
+
   <div class='wrapper'>
     <button type='button' class='add-option btn btn-info' {{action 'addOption'}}>+ Option</button>
   </div>

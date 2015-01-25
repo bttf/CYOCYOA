@@ -20,8 +20,12 @@ export default Ember.ObjectController.extend({
     savePage: function(page) {
       console.log('saving page');
       var _this = this;
-      page.save().then(function() {
+      page.save().then(function(page) {
         console.log('page saved');
+        var options = page.get('options');
+        for(var i = 0; i < page.get('options.length'); i++) {
+          options.objectAt(i).save();
+        }
         _this.get('model.pages').addObject(page);
         _this.get('model').save();
       }, function(err) {
