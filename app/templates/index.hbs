@@ -23,7 +23,14 @@
     <a href='#' data-toggle='modal' data-target='#newStoryModal'>
       <div class='story'>
         + New Story
-      </div>
-    </a>
+      </div></a>
+
+    {{#each story in stories}}
+      {{#link-to 'story' story}}
+        <div class='story'>
+          {{story.title}}
+        </div>
+      {{/link-to}}
+    {{/each}}
   </div>
 </div>
