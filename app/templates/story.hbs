@@ -4,9 +4,13 @@
       {{title}}
     </div>
     <div class='img-upload col-xs-12 col-sm-4'>
-      <div id='drop-zone'>
-        Drop Files Here
-      </div>
+        <img {{bind-attr class=':img-responsive' src=img}}>
+        <div class='filesize-err text-danger'>
+          File size limit: 850KB
+        </div>
+        Story Image
+        <br>
+        {{img-upload title=title story=model id='file-input'}}
     </div>
   </div>
 </div>

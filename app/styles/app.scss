@@ -115,18 +115,31 @@ body {
 }
 
 .story {
+  margin: 0 8em;
   .story-title {
     font-size: 5em;
     font-family: 'Noto Serif', serif;
     text-align: center;
+    margin: 0.5em 0;
   }
   .img-upload {
-    #drop-zone {
-      border: 2px dashed #BBB;
-      border-radius: 5px;
-      padding: 25px;
-      text-align: center;
-      color: #BBB;
+    font-size: 1.5em;
+    font-family: 'Raleway', serif;
+    border: 2px dashed #ccc;
+    padding: 1em;
+    input {
+      font-size: 0.75em;
+      padding: 1em;
+      border-radius: 10px;
+      display: inline-block;
+      background-color: #ccc;
+      margin: 1em 0;
+    }
+    img {
+      margin-bottom: 1em;
+    }
+    .filesize-err {
+      display: none;
     }
   }
 }

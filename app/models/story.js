@@ -6,5 +6,6 @@ var attr = DS.attr,
 export default DS.Model.extend({
   user: belongsTo('user', { inverse: 'stories' }),
   title: attr('string'),
-  firstPage: belongsTo('page')
+  firstPage: belongsTo('page'),
+  img: attr()
 });
