@@ -5,9 +5,9 @@ var attr = DS.attr,
     hasMany = DS.hasMany;
 
 export default DS.Model.extend({
-  user: belongsTo('user', { inverse: 'stories' }),
+  user: belongsTo('user', { async: true, inverse: 'stories' }),
   title: attr('string'),
   firstPage: belongsTo('page'),
-  pages: hasMany('page', { inverse: 'story' }),
+  pages: hasMany('page', { async: true, inverse: 'story' }),
   img: attr('string')
 });

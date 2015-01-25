@@ -21,25 +21,11 @@ export default Ember.Component.extend({
         return function(e) {
           var size = f.size / 1024;
           if (size > 850) {
-            console.log('filesize');
-            //$('.file-size-error').show();
             component.set('fileSizeError', true);
             return;
           } else {
-            //$('.filesize-err').hide();
             component.set('fileSizeError', false);
           }
-          // $.ajax({
-          //   type: 'PATCH',
-          //   url: 'https://' + ENV.APP.firebaseInstance + '.firebaseio.com/stories/' + component.get('story.id') + '/.json',
-          //   data: '{ "img": "' + e.target.result + '" }',
-          //   success: function() {
-          //     console.log('success');
-          //   },
-          //   error: function(xhr, status, err) {
-          //     console.log('error', err);
-          //   }
-          // });
         };
       })(file);
       reader.readAsDataURL(file);
@@ -50,10 +36,13 @@ export default Ember.Component.extend({
     actions: {
       save: function() {
         console.log('here we save page');
+        this.sendAction('save', this.get('page'));
       },
       toggleCollapse: function() {
-        console.log('collapse page');
         this.set('isCollapsed', !this.get('isCollapsed'));
+      },
+      delete: function() {
+        this.sendAction('delete', this.get('page'));
       }
     }
 

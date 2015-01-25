@@ -11,6 +11,8 @@
   
   <button type='button' class='btn btn-danger' {{action 'delete'}}>Delete</button>
 
+  <button type='button' class='btn btn-primary' {{action 'save'}}>Save</button>
+
 {{else}}
 
   {{page.title}}
@@ -25,4 +27,7 @@
   {{/if}}
 </button>
 
-<button type='button' class='btn btn-primary' {{action 'save'}}>Save</button>
+
+{{#if page.isDirty}}
+<div class='text-danger'>Unsaved progress</div>
+{{/if}}

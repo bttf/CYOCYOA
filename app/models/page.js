@@ -7,6 +7,5 @@ export default DS.Model.extend({
   story: belongsTo('story'),
   title: attr('string'),
   body: attr('string'),
-  img: attr('string'),
-  options: attr({ defaultValue: [] })
+  img: attr('string')
 });
