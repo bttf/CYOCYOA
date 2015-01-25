@@ -47,6 +47,9 @@ export default Ember.Component.extend({
       },
       delete: function() {
         this.sendAction('delete', this.get('page'));
+      },
+      deleteOption: function(option) {
+        this.sendAction('deleteOption', option);
       }
     }
 

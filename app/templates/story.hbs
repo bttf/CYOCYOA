@@ -28,9 +28,9 @@
 
     {{#each page in model.pages}}
       {{#if collapseAll}}
-        {{page-editor pages=model.pages page=page save='savePage' delete='deletePage' addOption='addOption' isCollapsed=true}}
+        {{page-editor pages=model.pages page=page save='savePage' delete='deletePage' addOption='addOption' deleteOption='deleteOption' isCollapsed=true}}
       {{else}}
-        {{page-editor pages=model.pages page=page save='savePage' delete='deletePage' addOption='addOption' isCollapsed=false}}
+        {{page-editor pages=model.pages page=page save='savePage' delete='deletePage' addOption='addOption' deleteOption='deleteOption' isCollapsed=false}}
       {{/if}}
     {{/each}}
 

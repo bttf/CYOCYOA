@@ -6,6 +6,7 @@ export default Ember.ObjectController.extend({
     addOption: function(page) {
       var options = page.get('options');
       options.pushObject(this.get('store').createRecord('option'));
+      page.set('isDirty', true);
     },
     toggleCollapseAll: function() {
       this.set('collapseAll', !this.get('collapseAll'));
@@ -38,6 +39,14 @@ export default Ember.ObjectController.extend({
         page.destroyRecord();
       }, function(err) {
         console.log('error', err);
+      });
+    },
+    deleteOption: function(option) {
+      option.get('parentPage').then(function(page) {
+        page.get('options').removeObject(option);
+        page.save().then(function() {
+          option.destroyRecord();
+        });
       });
     }
   }

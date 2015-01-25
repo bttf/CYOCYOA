@@ -188,6 +188,14 @@ a {
   .option-lead {
       width: 66%;
   }
+  .option-bar {
+    padding: 0;
+    margin: 0.2em 0;
+    background-color: #DDD;
+  }
+  .delete-option {
+    margin-right: 1em;
+  }
 }
 
 .is-collapsed {

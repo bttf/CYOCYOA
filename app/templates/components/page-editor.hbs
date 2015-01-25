@@ -7,9 +7,16 @@
 
   {{#each option in page.options}}
 
-    {{input type='text' class='option-lead' value=option.lead placeholder='Option'}}
+    <div class='option-bar'>
+      {{input type='text' class='option-lead' value=option.lead placeholder='Option'}}
 
-    {{view 'select' content=pages optionLabelPath='content.title' optionValuePath='content.id' selection='null' value=option.goTo}}
+      <label>Go to: {{view 'select' content=pages optionLabelPath='content.title' optionValuePath='content.id' selection='null' value=option.goTo}}</label>
+
+      <span class='delete-option pull-right'>
+        <a href='' {{action 'deleteOption' option}}>
+          {{fa-icon 'close'}}</a>
+      </span>
+    </div>
 
   {{/each}}
 
@@ -46,3 +53,4 @@
 {{#if page.isDirty}}
   <div class='text-danger'>Unsaved progress</div>
 {{/if}}
+
