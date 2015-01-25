@@ -26,6 +26,7 @@ export default Ember.Component.extend({
           } else {
             component.set('fileSizeError', false);
           }
+          component.set('page.img', e.target.result);
         };
       })(file);
       reader.readAsDataURL(file);
