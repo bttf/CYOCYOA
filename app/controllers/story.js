@@ -25,7 +25,12 @@ export default Ember.ObjectController.extend({
       });
     },
     deletePage: function(page) {
-      page.destroyRecord();
+      this.get('model.pages').removeObject(page);
+      this.get('model').save().then(function() {
+        page.destroyRecord();
+      }, function(err) {
+        console.log('error', err);
+      });
     }
   }
 });
