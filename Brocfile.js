@@ -11,6 +11,7 @@ app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap-social/bootstrap-social.css');
 app.import('bower_components/jquery-rotate/jquery.rotate.js');
+app.import('bower_components/node-uuid/uuid.js');
 
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That

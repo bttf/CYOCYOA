@@ -17,6 +17,8 @@
     "jquery-rotate": "https://github.com/schickling/jquery-rotate.git#~0.1.0",
     "ember-simple-auth": "0.7.2",
     "emberfire": "~1.3.2",
-    "bootstrap-social": "~4.8.0"
+    "bootstrap-social": "~4.8.0",
+    "uuid": "~2.0.1",
+    "node-uuid": "https://github.com/broofa/node-uuid.git#~1.4.2"
   }
 }

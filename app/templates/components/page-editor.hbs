@@ -2,6 +2,12 @@
   {{input type='text' class='title-input' value=page.title placeholder='Name or ID'}}
   
   {{textarea rows='5' class='body-input' value=page.body placeholder='Body'}}
+
+  {{input type='file' id=imgInputId}}
+
+  <div {{bind-attr class='fileSizeError:file-size-error:file-size :text-danger'}}>
+    File size limit: 850 KB
+  </div>
   
   <button type='button' class='btn btn-danger' {{action 'delete'}}>Delete</button>
 

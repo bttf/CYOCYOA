@@ -166,6 +166,12 @@ a {
   input, textarea {
     width: 100%;
   }
+  .file-size {
+    display: none;
+  }
+  .file-size-error {
+    display: show;
+  }
 }
 
 .is-collapsed {
