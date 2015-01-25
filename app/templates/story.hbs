@@ -19,6 +19,13 @@
             Collapse All
           {{/if}}
         </button>
+        <button type='button' class='btn btn-danger' {{action 'toggleDelete'}}>
+          {{#if pendingDelete}}
+            Sure?
+          {{else}}
+            Delete Story
+          {{/if}}
+        </button>
         <div class='messages'>
           {{success}}
           {{error}}

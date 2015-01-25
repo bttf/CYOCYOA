@@ -2,11 +2,13 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   collapseAll: false,
+  pendingDelete: false,
   actions: {
     addOption: function(page) {
-      var options = page.get('options');
-      options.pushObject(this.get('store').createRecord('option'));
-      page.set('isDirty', true);
+      var _this = this;
+      page.get('options').then(function(options) {
+        options.pushObject(_this.get('store').createRecord('option'));
+      });
     },
     toggleCollapseAll: function() {
       this.set('collapseAll', !this.get('collapseAll'));
@@ -48,6 +50,33 @@ export default Ember.ObjectController.extend({
           option.destroyRecord();
         });
       });
+    },
+    toggleDelete: function() {
+      if (this.get('pendingDelete')) {
+        var _this = this;
+        var story = this.get('model');
+        story.get('pages').then(function(pages) {
+          for(var i = 0; i < pages.get('length'); i++) {
+            pages.objectAt(i).get('options').then(function(options) {
+              for(var i = 0; i < options.get('length'); i++) {
+                options.objectAt(i).destroyRecord();
+              }
+            });
+            pages.objectAt(i).destroyRecord();
+          }
+        }, function(err) {
+          console.log('error', err);
+        });
+        story.get('user').then(function(user) {
+          user.get('stories').then(function(stories) {
+            stories.removeObject(story);
+            user.save();
+          });
+        }, function(err) {
+          console.log('error', err);
+        });
+      }
+      this.set('pendingDelete', !this.get('pendingDelete'));
     }
   }
 });

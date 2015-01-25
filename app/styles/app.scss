@@ -104,9 +104,15 @@ a {
   }
   .story-box {
     @extend .box;
+    .delete {
+      font-size: 0.5em;
+    }
   }
   .story-box:hover {
     text-decoration: underline;
+  }
+  .new-story {
+    background-color: #CCE;
   }
 }
 
@@ -195,6 +201,17 @@ a {
   }
   .delete-option {
     margin-right: 1em;
+    a {
+      color: #B92C28;
+    }
+  }
+  .file-input {
+    input {
+      display: inline-block;
+      width: auto;
+    }
+    display: block;
+    margin: 0.5em 0;
   }
 }
 

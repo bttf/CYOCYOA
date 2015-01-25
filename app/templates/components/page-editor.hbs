@@ -3,7 +3,9 @@
   
   {{textarea rows='5' class='body-input' value=page.body placeholder='Body'}}
 
-  {{input type='file' id=imgInputId}}
+  <div class='wrapper'>
+    <button type='button' class='add-option btn btn-info' {{action 'addOption'}}>+ Option</button>
+  </div>
 
   {{#each option in page.options}}
 
@@ -12,7 +14,7 @@
 
       <label>Go to: {{view 'select' content=pages optionLabelPath='content.title' optionValuePath='content.id' selection='null' value=option.goTo}}</label>
 
-      <span class='delete-option pull-right'>
+      <span class='delete-option'>
         <a href='' {{action 'deleteOption' option}}>
           {{fa-icon 'close'}}</a>
       </span>
@@ -20,9 +22,7 @@
 
   {{/each}}
 
-  <div class='wrapper'>
-    <button type='button' class='add-option btn btn-info' {{action 'addOption'}}>+ Option</button>
-  </div>
+  <label class='file-input'>Image: {{input type='file' id=imgInputId}}</label>
 
   <div {{bind-attr class='fileSizeError:file-size-error:file-size :text-danger'}}>
     File size limit: 850 KB
