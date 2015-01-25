@@ -26,6 +26,13 @@
             Delete Story
           {{/if}}
         </button>
+        {{#if publish}}
+          {{#link-to 'published' publish}}Published{{/link-to}}
+        {{else}}
+          <button type='button' class='btn btn-success' {{action 'publish'}}>
+            Publish
+          </button>
+        {{/if}}
         <div class='messages'>
           {{success}}
           {{error}}

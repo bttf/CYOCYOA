@@ -77,6 +77,18 @@ export default Ember.ObjectController.extend({
         });
       }
       this.set('pendingDelete', !this.get('pendingDelete'));
+    },
+    publish: function() {
+      var _this = this;
+      this.get('model.publish').then(function(publish) {
+        if (!publish) {
+          var publish = _this.get('store').createRecord('publish');
+          _this.set('model.publish', publish);
+          publish.set('story', _this.get('model'));
+          publish.save();
+          _this.get('model').save();
+        }
+      });
     }
   }
 });

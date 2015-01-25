@@ -9,5 +9,6 @@ export default DS.Model.extend({
   title: attr('string'),
   firstPage: belongsTo('page'),
   pages: hasMany('page', { async: true, inverse: 'story' }),
-  img: attr('string')
+  img: attr('string'),
+  publish: belongsTo('publish', { async: true })
 });
