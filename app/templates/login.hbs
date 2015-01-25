@@ -21,7 +21,16 @@
           </p>
         </div>
         <div class='login'>
+            <a href='#' {{action 'fbLogin'}}>Log in with Facebook</a>
+            <br>
+            <a href='#' {{action 'gitLogin'}}>Log in with GitHub</a>
+            <br>
+            <a href='#' {{action 'anonLogin'}}>Log in as a Guest</a>
         </div>
+        {{#if session.isAuthenticated}}
+        <h1>Success!</h1>
+          <a href='#' {{action 'logout'}}>Log Out</a>
+        {{/if}}
       </div>
     </div>
   </div>
