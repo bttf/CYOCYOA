@@ -1,8 +1,5 @@
 <div class='story'>
   <div class='row'>
-    <div class='story-title col-xs-12'>
-      {{title}}
-    </div>
     <div class='img-upload col-xs-12 col-sm-4'>
         <img {{bind-attr class=':img-responsive' src=img}}>
         <div class='filesize-err text-danger'>
@@ -12,6 +9,13 @@
         <br>
         {{img-upload title=title story=model id='file-input'}}
     </div>
+    <div class='story-title col-xs-12 col-sm-8'>
+      {{title}}
+    </div>
+    <a href='#'>
+      <div class='page-box'>
+        + New Page
+      </div></a>
   </div>
 </div>
 
