@@ -1,0 +1,22 @@
+{{#unless isCollapsed}}
+  {{input type='text' class='title-input' value=page.title placeholder='Name or ID'}}
+  
+  {{textarea rows='5' class='body-input' value=page.body placeholder='Body'}}
+  
+  <button type='button' class='btn btn-danger' {{action 'delete'}}>Delete</button>
+
+{{else}}
+
+  {{page.title}}
+
+{{/unless}}
+
+<button type='button' class='btn btn-primary' {{action 'toggleCollapse'}}>
+  {{#if isCollapsed}}
+    Expand
+  {{else}}
+    Collapse
+  {{/if}}
+</button>
+
+<button type='button' class='btn btn-primary' {{action 'save'}}>Save</button>

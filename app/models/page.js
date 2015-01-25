@@ -5,7 +5,7 @@ var attr = DS.attr,
 
 export default DS.Model.extend({
   story: belongsTo('story'),
-  nameId: attr('string'),
+  title: attr('string'),
   body: attr('string'),
   img: attr('string'),
   options: attr({ defaultValue: [] })

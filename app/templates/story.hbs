@@ -12,16 +12,17 @@
     <div class='story-title col-xs-12 col-sm-8'>
       {{title}}
     </div>
+
+    {{#each page in model.pages}}
+      {{#if page.isNew}}
+        {{page-editor page=page}}
+      {{/if}}
+    {{/each}}
+
     <a href='' {{action 'newPage'}}>
       <div class='page-box'>
         + New Page
     </div></a>
-
-    {{#each page in model.pages}}
-      {{#if page.isNew}}
-        <h1>ha, page</h1>
-      {{/if}}
-    {{/each}}
   </div>
 </div>
 
