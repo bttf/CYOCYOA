@@ -219,6 +219,23 @@ a {
   width: auto;
 }
 
-.publish {
-
+.story-window {
+  width: 600px;
+  min-height: 400px;
+  padding: 2em;
+  margin: 6em auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #EEE;
+  font-family: 'Droid Serif', serif;
+  .story-title {
+    font-size: 6em;
+  }
+  .story-begin {
+    margin: 1em 0;
+    font-size: 2em;
+    text-decoration: underline;
+    a {
+      color: #EEE;
+    }
+  }
 }
